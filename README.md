@@ -4,7 +4,7 @@ https://www.kaggle.com/datasets/cashutosh/gender-classification-dataset
 分类测试集准确率可以达到 90.84899991415573%  （还可以更好，但是采用了早停策略 ，没有进一步的训练）
 ### 训练
 训练基于4060 显卡
-训练时长10min以内完成
+训练时长10min以内
 ### 架构：
 _gcNet卷积神经网络_
 

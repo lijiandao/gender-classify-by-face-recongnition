@@ -34,32 +34,29 @@ Dropout层（Dropout Layers）：
 
 
 ### 运行方法
-1. 下载项目到本地
-   `git clone [git链接]`
+1. 下载项目到本地  
+   `git clone [git链接]`  
 2. 切换到项目的根目录,安装依赖
-	`pip install -r requirements.txt`
-	python 3.9
-  CDUA 11.8
+	`pip install -r requirements.txt`  
+	python 3.9  
+  CDUA 11.8  
 	torch安装失败请尝试：  `conda install pytorch==2.2.0 torchvision==0.17.0 torchaudio==2.2.0 pytorch-cuda=11.8 -c pytorch -c nvidia`
-	请注意numpy版本：要求小于1.20版本 否则将会报错！
-3.运行exam_cuda_exist.py 查看电脑的cudnn和cuda的版本，以在程序环境出错的时候查询电脑的cuda和cudnn和torch的版本的匹配性，如果确信环境正常，此步可以跳过
-4.下载数据集到本地根目录下的dataset目录中，解压得到archive 文件夹
-5.运行datafiles_creating目录下的raw_filelist.py 创建数据集的索引，对数据集留分 （该代码中创建数据集train/val 比率为0.9 默认不用修改）
-6.运行gender_main.py代码，他是训练和测试的代码的集合：
-[1]如果想要进行训练，请注释resume = "best_checkpoint.pth.tar" ，解除 # resume = None 的注释；
-[2]在训练结束之后，可以解除注释resume = "best_checkpoint.pth.tar"，添加 resume = None 的注释；
-[3]默认设置当验证集准确率超过90% 自动停止训练，启动测试模式，开始进行测试集的评估；如果想要更好的准确率，请调节`if acc>90:`代码；
-[4]如果想要单独的进行模型的测试，请设置    evaluate = True   这样可以跳过训练，但是同时需要设置resume 的路径，为你要测试的模型的路径；
-
-
-### 训练过程图
-
+	请注意numpy版本：要求小于1.20版本 否则将会报错!
+3. 运行exam_cuda_exist.py 查看电脑的cudnn和cuda的版本，以在程序环境出错的时候查询电脑的cuda和cudnn和torch的版本的匹配性，如果确信环境正常，此步可以跳过  
+4. 下载数据集到本地根目录下的dataset目录中，解压得到archive 文件夹  
+5. 运行datafiles_creating目录下的raw_filelist.py 创建数据集的索引，对数据集留分 （该代码中创建数据集train/val 比率为0.9 默认不用修改）  
+6. 运行gender_main.py代码，他是训练和测试的代码的集合:  
+[1]如果想要进行训练，请注释resume = "best_checkpoint.pth.tar" ，解除 # resume = None 的注释;  
+[2]在训练结束之后，可以解除注释resume = "best_checkpoint.pth.tar"，添加 resume = None 的注释;  
+[3]默认设置当验证集准确率超过90% 自动停止训练，启动测试模式，开始进行测试集的评估；如果想要更好的准确率，请调节`if acc>90:`代码;  
+[4]如果想要单独的进行模型的测试，请设置    evaluate = True   这样可以跳过训练，但是同时需要设置resume 的路径，为你要测试的模型的路径；  
+  
 
 
 ### 数据集结构：
-train:42340
-val:4669
-test:11649
-all:58658 
+train:42340  
+val:4669  
+test:11649  
+all:58658  
 
 
